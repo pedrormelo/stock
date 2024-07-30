@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="shortcut icon" href="assets/img/jab.png" type="image/x-icon" />
+
+    <title>STOK</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <header class="navbar">
+            <ul class="navbar">
+                <div class="vertical-divider"></div>
+                <li class="li-nav"><a class="nav-a" href="index.html">Inicio</a></li>
+                <div class="vertical-divider"></div>
+                <li class="li-nav"><a class="nav-a" href="cadastro.html">Cadastro</a></li>
+                <div class="vertical-divider"></div>
+                <li class="li-nav"><a class="nav-a" href="consulta.html">Consulta</a></li>
+                <div class="vertical-divider"></div>
+                <li class="li-nav"><a class="nav-a" href="estoque.html">Estoque</a></li>
+                <div class="vertical-divider"></div>
+            </ul>
+        </header>
+
+        <div class="form-container">
+
+            <form class="form-ics">
+                <!-- onsubmit="event.preventDefault(); atualizaDisp(); -->
+
+                <header class="form-header">
+                    <h1>Atualizar Dispositivos</h1>
+                </header>
+
+                <hr>
+
+                <div class="input-field">
+
+                    <select id="atualizaStatus">
+                        <option value="">Atualizar Status</option>
+                        <option value="1">Operante</option>
+                        <option value="2">Inoperante</option>
+                        <option value="3">Manutenção</option>
+                    </select>
+
+                    <select id="atualizaIdUnidade">
+                        <option value="">Selecione Unidade</option>
+                    </select>   
+                        
+                        <input type="text" id="descricaoInput2"
+                        placeholder="Atualize a Descrição o do Dispositivo..." />
+                    
+                </div>                  
+
+                <br>
+
+                    <button id="atualizar"  class="btn-5">
+                        Atualizar
+                    </button>
+
+                
+                <div id="resultados1" class="result-container">
+                    <!-- Aqui serão exibidos os resultados da consulta -->
+                </div>
+                
+            </form>
+        </div>
+        
+
+
+    <script src="./assets/scripts/service/api.js"></script>
+    <script src="./assets/scripts/atualiza.js"></script>
+    <script src="./assets/scripts/exclui.js"></script>
+
+</body>
+
+</html>

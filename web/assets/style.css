@@ -1,0 +1,541 @@
+/* @import url('https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@400;500;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 300,
+    'GRAD' 0,
+    'opsz' 48
+    
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+
+
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+}
+
+/* PARA TIRAR ROLETA DO TYPE NUMBER */
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input, select, button {
+    border: solid 1px #161616;
+    outline-color: #1e88e5;
+    outline-width: 1px;
+}
+
+body {
+    color: #333;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    background-image: url(./img/jaboatao.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+
+
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); */
+    /* box-shadow: #333 0px 3px 8px; */
+
+}
+
+.form-container{
+    display: flex;
+    justify-content: center; /* Space forms horizontally */
+    align-items: flex-start; /* Align forms at the top */
+    margin-top: 20px;  
+
+}
+
+.form-ics {
+    width: 600px;
+
+    padding: 20px;
+    margin: 40px;
+    margin-top: 35px;
+
+    background-color: #f1f1f1;
+    box-shadow: #333 0px 3px 8px;
+
+    border-radius: 10px;
+}
+
+.form-ics .form-header {
+    width: 100%;
+    padding-inline: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center; /* Adicione esta linha para centralizar o título */
+
+}
+
+h1 {
+    text-align: center; /* Alinha o texto do h1 ao centro */
+
+}
+
+hr {
+    margin-bottom: 15px;
+}
+
+.form-ics .input-field {
+    width: 100%;
+    flex: 1;
+
+    border: 1px, #161616;
+
+    /* margin-top: 15px; */
+    
+
+}
+
+.input-field label {
+    font-size: 16px;
+}
+
+.input-field input,
+.input-field select{
+    width: 100%;
+    flex: 1;
+
+    padding: 0.8rem;
+    margin-top: 7px;
+    margin-bottom: 7px;
+
+    border: 1px, #161616;
+    border-radius: 4px;
+
+}
+
+.result-container {
+    width: 100%;
+    max-height: 300px; /* Defina a altura máxima para a barra de rolagem */
+
+    overflow-y: auto; /* Adiciona uma barra de rolagem vertical */
+    overflow-x: hidden; /* Oculta a barra de rolagem horizontal */
+
+    position: relative;
+
+    border: 1px solid #161616;
+    border-radius: 4px;
+
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.search-container {
+    width: 100%;
+
+    padding: 0.8rem;
+
+    border: 1px, #161616;
+    border-radius: 4px;
+}
+
+.search-container,
+.filter-field {
+    flex: 1; /* Ocupa todo o espaço disponível */
+    margin-right: 10px; /* Margem entre os elementos */
+}
+
+.filter-field select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #161616;
+    border-radius: 4px;
+    margin-top: 6px;
+}
+
+.select-quantidade {
+    max-width: 25%;
+    margin-left: 6px;
+
+}
+
+.small-box {
+    max-width: 15%;
+    /* margin-left: 6px; */
+    margin-right: 6px;
+    
+}
+
+.medium-box {
+    display: flex;
+    justify-content: space-around;
+    /* max-width: auto; */
+    min-width: 50px;
+
+
+}
+
+.small-button {
+    padding: 0.8rem;
+    max-height: 50px;
+    max-width: 50px;
+    margin-left: 6px;
+    
+}
+
+
+/* Estilos para a barra de rolagem */
+.result-container::-webkit-scrollbar {
+    width: 10px; /* Largura da barra de rolagem */
+}
+
+/* Estilos para o botão de rolagem */
+.result-container::-webkit-scrollbar-thumb {
+    background-color: #1e88e5; /* Cor de fundo do botão de rolagem */
+    border-radius: 10px; /* Deixa o botão de rolagem mais redondo */
+}
+
+.ul-result {
+    background-color: #f5f5f5;
+
+    list-style: none; /* Remove os marcadores de lista padrão */
+    padding: 0; /* Remove o preenchimento padrão da lista */
+
+}
+
+.li-result {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px;
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    border-bottom: 1px solid #0e0e0e;
+
+}
+
+.li-result:hover {
+    color: #2793f1;
+
+    transition: 0.2s;
+
+}
+
+ul .ul-result .li-result .iten-list:last-child {
+    border-bottom: none; /* Remove a linha de divisão do último item */
+}
+
+
+.container-input {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 6px;
+    
+}
+
+.container-input .id-input {
+    width: 15%;
+
+    margin-top: 6px;
+    padding: 0.8rem;
+
+    border: 1px, #161616;
+    border-radius: 4px;
+
+}
+
+.container-input .name-input {
+    width: 65%;
+
+    margin-top: 6px;
+    padding: 0.8rem;
+
+    border: 1px, #161616;
+    border-radius: 4px;
+
+}
+
+.radioQuest {
+    display: flex;
+    align-content: left;
+
+}
+
+.display-line {
+    display: inline;
+}
+
+.search-button {
+    width: 100%;
+    flex: 1;
+
+    cursor: pointer;
+
+    margin-top: 6px;
+    padding: 0.8rem;
+
+    background-color: #f0ebeb;
+
+    border: 1px, #161616;
+    border-radius: 4px;
+
+    transition: 0.2s;
+}
+
+.btn-1 {
+    width: 100%;
+    flex: 1;
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+
+    cursor: pointer;
+
+    margin-top: 6px;
+    padding: 0.8rem;
+
+    background-color: #f0ebeb;
+    color: #161616;
+
+    border: 1px, #161616;
+    border-radius: 4px;
+
+    transition: 0.2s;
+}
+
+.btn-3 {
+    width: auto;
+    cursor: pointer;
+
+    margin-top: 6px;
+
+    background-color: #f1f1f1;
+    color: #0e0e0e;
+
+    border: 1px, #161616;
+    border-radius: 4px;
+    box-shadow: none;
+    outline: none;
+
+    transition: 0.2s;
+}
+
+.btn-4 {
+    width: auto;
+    cursor: pointer;
+
+    margin-top: 6px;
+
+    background-color: #f1f1f1;
+    color: #0e0e0e;
+
+    border: 1px, #161616;
+    border-radius: 4px;
+    box-shadow: none;
+    outline: none;
+
+    transition: 0.2s;
+}
+
+.btn-5 {
+    width: 100%;
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+
+    cursor: pointer;
+
+    padding: 0.8rem;
+    margin-top: 6px;
+
+    background-color: #fafafa;
+    color: #0e0e0e;
+
+    border: 1px, #161616;
+    border-radius: 4px;
+    box-shadow: none;
+    outline: none;
+
+    transition: 0.2s;
+}
+
+
+.container-btn-2{
+    display: flex;
+    margin-top: 6px;
+    justify-content: space-between;
+
+}
+
+.container-btn-2 .btn-5 {
+    display: flex;
+    justify-content: space-between;
+
+    width: 49.72%;
+    cursor: pointer;
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    
+    box-sizing: border-box;
+
+    padding: 0.8rem;
+
+    background-color: #f0ebeb;
+
+    border: 1px, #161616;
+    border-radius: 4px;
+    
+    transition: 0.2s;
+}
+
+.btn-1:hover {
+    background-color: #bbbbbb;
+
+    transition: 0.2s;
+}
+
+.btn-2:hover {
+    background-color: #8f8f8f;
+
+    transition: 0.2s;
+}
+
+.btn-3:hover {
+    color: #f8f8f8;
+    background-color: #be1f1f;
+
+    transition: 0.2s;
+}
+
+.btn-4:hover {
+    color: #f8f8f8;
+    background-color: #1f91be;
+
+    transition: 0.2s;
+}
+
+.btn-5:hover {
+    color: #f8f8f8;
+    background-color: #1f91be;
+
+    transition: 0.2s;
+}
+
+.search-button:hover {
+    background-color: #919191;
+
+}
+
+.vertical-divider {
+    border-left: 1px solid #ccc; /* Adjust the color and thickness as needed */
+    height: 100%; /* Adjust the height to match the content */
+    margin: 0 20px; /* Adjust the margin to control the spacing */
+}
+
+.navbar {
+    width: 100%;
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+
+    background-color: #1e3552;
+    
+    color: #f0ebeb;
+    text-decoration: none;
+}
+
+.a-1 {
+    border: solid 1px #161616;
+    outline-color: #1e88e5;
+    outline-width: 1px;
+}
+
+
+p {
+    padding: 0.8rem;
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+ul.navbar {
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+}
+
+.li-nav{
+    display: inline-block;
+
+    margin: 8px;
+}
+
+a {
+    display: inline-block;
+
+    text-decoration: none;
+
+    
+}
+
+.nav-a {
+    color: #fdfdfd;
+
+}
+
+.navbar a:hover {
+    color: #1e88e5;
+
+    border-bottom: 2px solid #fff; /* Adiciona uma borda branca em baixo */
+
+    transition: border-bottom-color 0.2s; /* Adiciona transição para a mudança de cor */
+
+}
