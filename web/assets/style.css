@@ -198,6 +198,53 @@ hr {
 
 }
 
+.select2 {
+    min-width: 100%;
+
+    margin-top: 7px;
+    margin-bottom: 7px;
+
+
+}
+
+/* Estilo para a versão Select2 do select */
+.select2-container--default .select2-selection--single {
+    border: solid 1px #161616;
+    outline-color: #1e88e5;
+    outline-width: 1px;
+    border-radius: 4px;
+    height: auto; /* Garantir que a altura corresponda */
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: normal; /* Para garantir que o texto seja centralizado */
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 100%; /* Garantir que a seta ocupe toda a altura */
+    right: 10px; /* Ajustar a posição da seta */
+}
+
+/* Estilo para o dropdown do Select2 */
+.select2-container--default .select2-dropdown {
+    border: solid 1px #161616;
+    border-radius: 4px;
+    font-family: "Poppins", sans-serif;
+}
+
+.select2-container--default .select2-results__option {
+    padding: 0.8rem;
+}
+
+.select2-container--default .select2-results__option--highlighted {
+    background-color: #1e88e5;
+    color: #fff;
+}
+
+
 .small-box {
     max-width: 15%;
     /* margin-left: 6px; */
